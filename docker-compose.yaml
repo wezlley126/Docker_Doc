@@ -1,0 +1,26 @@
+services:
+  mysql:
+    image: mysql
+    volumes:
+      - meubanco:/etc/mysql
+    networks:
+      minharede:
+
+  phpmyadmin:
+    image: phpmyadmin
+    volumes:
+      - meubanco:/etc/phpmyadmin
+    networks:
+      minharede:
+    ports:
+      - 0.0.0.0:8000:80
+
+volumes:
+  meubanco:
+
+networks:
+  minharede:
+    ipam:
+      driver: default
+      config:
+        - subnet: 192.168.1.1/24
