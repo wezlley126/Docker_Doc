@@ -4,7 +4,7 @@ services:
     ports:
       - 127.0.0.1:3306:3306
     environment:
-      MYSQL_ROOT_PASSWORD: lelo2004
+      MYSQL_ROOT_PASSWORD: 126
     volumes:
       - meubanco:/var
     networks:
